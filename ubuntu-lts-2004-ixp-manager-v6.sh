@@ -670,7 +670,7 @@ echo '[done]'
 echo -n "Installing composer for PHP dependencies... "
 cd $IXPROOT
 
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+curl https://getcomposer.org/installer > ./composer-setup.php
 php composer-setup.php --quiet
 rm composer-setup.php
 echo '[done]'
